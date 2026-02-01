@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeria • Tech & Music</title>
+  <style>
+    :root {
+      --bg1: #0b0a02;
+      --bg2: #1a1606;
+      --neon: #facc15;     /* amarelo principal */
+      --yellow2: #fde047;  /* amarelo claro */
+      --orange: #f59e0b;   /* dourado */
+      --card: rgba(11, 10, 2, .75);
+      --border: #3a2f08;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, Arial, sans-serif;
+      color: #fff7cc;
+      background:
+        radial-gradient(1000px 400px at 10% -10%, #facc1533, transparent 60%),
+        radial-gradient(800px 300px at 110% 10%, #fde04733, transparent 60%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      padding: 24px;
+    }
+
+    .top {
+      max-width: 1000px;
+      margin: 0 auto 16px;
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .top h1 { margin: 0 0 6px; }
+    .top p { margin: 0; opacity: .9; }
+
+    .grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      background: #0b0a02cc;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(0,0,0,.45);
+      transition: transform .08s ease, filter .08s ease;
+    }
+
+    .card:hover { transform: translateY(-2px); filter: brightness(1.08); }
+
+    .card img, .card video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      background: #0b0a02;
+    }
+
+    .caption {
+      padding: 10px 12px;
+      font-size: .9rem;
+      opacity: .9;
+      border-top: 1px solid var(--border);
+      color: #fde68a;
+    }
+
+    footer {
+      max-width: 1000px;
+      margin: 14px auto 0;
+      font-size: .8rem;
+      opacity: .75;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Aba de texto em cima -->
+  <section class="top">
+    <h1>Diplomas</h1>
+    <p>Aqui eu salvo momentos, formaturas e meus certificados.</p>
+  </section>
+
+  <!-- Grade de fotos e vídeos -->
+  <main class="grid">
+
+    <!-- FOTO -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511376777868-611b54f68947?q=80&w=800" alt="Estúdio de música">
+      <div class="caption">Estúdio / vibe noturna</div>
+    </div>
+
+    <!-- FOTO -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800" alt="Setup tech">
+      <div class="caption">Setup TI minimalista</div>
+    </div>
+
+    <!-- VÍDEO (mp4) -->
+    <div class="card">
+      <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+      <div class="caption">Trecho de vídeo</div>
+    </div>
+
+  </main>
+
+  <footer>@maria.wxz</footer>
+
+</body>
+</html>
